@@ -41,7 +41,7 @@ This project aims to build a command line application that can be trained on any
 
 `--json_file`: use your own label data for the training and classification.
 
-`--topk`: arguments.topk
+`--topk`: set the number of top values you want to retrieve.
 
 `--gpu`: decide whether you wan to process the algorithm on the gpu (if available) or the cpu.
 
@@ -49,10 +49,11 @@ This project aims to build a command line application that can be trained on any
 
 # 1. Prerequisites.
 
+- PyTorch
 - OpenCV
 - NumPy
 - MatPlotLib
-- IPython
+- PIL/pillow
 
 # 2. Loading and visualizing the data.
 
