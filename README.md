@@ -86,7 +86,7 @@ Finally, to predict the image category, the model first loads the trained model 
 
 # 6. How to use?
 
-For use, the repository should be cloned or downloaded. Running the main-classifier.py on the Terminal processes the image dataset given. To use the algorithms on other images the user must make a minor change in main-classifier.py in the variable that keeps the directory of the files to be classified. And then, the program should run smoothly and deliver the expected results.
+To use the model, clone or download this repository. Create the image dataset you need to classify. Run first the train.py file with all the train inputs detailed above, and then do the same for the predict.py.
 
 # 7. License.
 
