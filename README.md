@@ -55,17 +55,13 @@ This project aims to build a command line application that can be trained on any
 - MatPlotLib
 - PIL/pillow
 
-# 2. Loading and visualizing the data.
+# 2. Loading, preprocessing and visualizing the dataset.
 
-This traffic light dataset consists of 1484 number of color images in 3 categories - red, yellow, and green. As with most human-sourced data, the data is not evenly distributed among the types. There are:
-
-* 904 red traffic light images
-* 536 green traffic light images
-* 44 yellow traffic light images
+In this first step, I created functions to load the data from the directories; to resize, crop, transform, normalize and classify the data into training, validation and testing datasets usin `torchvision`; and to display the images.
 
 <p align="center"> <img src="https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/Classifier-Development/preprocessing-display-example.png" height=300 width=350> <p/>
 
-# 3. Pre-processing.
+# 3. Training the image classifier on the dataset.
 
 For classification tasks like this one we need to create features by performing the same analysis on different pictures. It is, therefore, important that similar images create similar features. And to facilitate this, we will standardize the input and output to understand what results we can expect from running the program.
 
@@ -78,7 +74,7 @@ Secondly, it is customary to convert categorical labels like 'red' to numerical 
 
 Finally, I created a function to standardize a list of images and pair each image to its one-hot encoded label.
 
-# 4. Feature extraction.
+# 4. Predicting the category of each image on the dataset.
 
 In this part of the project I thought about the different features and layers that combine to form a colored image and which ones are more characteristic of the areas that would represent the red, yellow and green lights in the image. I converted the images to HSV for the whole process.
 
