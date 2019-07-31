@@ -63,9 +63,7 @@ This traffic light dataset consists of 1484 number of color images in 3 categori
 * 536 green traffic light images
 * 44 yellow traffic light images
 
-<img src="https://github.com/inigo-irigaray/Traffic-Light-Classifier-Symbolic-AI/blob/master/Traffic-Light-99%25/images/Green-Light.png" height = 300 width=250><img src="https://github.com/inigo-irigaray/Traffic-Light-Classifier-Symbolic-AI/blob/master/Traffic-Light-99%25/images/Red-Light.png" height = 300 width=250><img src="https://github.com/inigo-irigaray/Traffic-Light-Classifier-Symbolic-AI/blob/master/Traffic-Light-99%25/images/Yellow-Light.png" height = 300 width=270>
-
-</p>
+<p align="center"> <img src="https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/Classifier-Development/preprocessing-display-example.png" height=300 width=350> <p/>
 
 # 3. Pre-processing.
 
