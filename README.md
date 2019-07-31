@@ -59,7 +59,7 @@ This project aims to build a command line application that can be trained on any
 
 In this first step, I created functions to load the data from the directories; to resize, crop, transform, normalize and classify the data into training, validation and testing datasets using `torchvision`; and to display the images.
 
-The datset need to resize to 224x224, since the vgg network takes in images of that size. Additional transformations on the training set, e.g. rotation or flipping, enables a better training on a more diverse set. The validation and testing sets measure the model's performance on images it hasn't processed yet.
+The dataset need to resize to 224x224, since the vgg network takes in images of that size. Additional transformations on the training set, e.g. rotation or flipping, enables a better training on a more diverse set. The validation and testing sets measure the model's performance on images it hasn't processed yet.
 
 Finally, the images need to be normalized, with values for the means [0.485, 0.456, 0.406] and for the standard deviations [0.229, 0.224, 0.225], calculated from the ImageNet images. These values will shift each color channel to be centered at 0 and range from -1 to 1.
 
