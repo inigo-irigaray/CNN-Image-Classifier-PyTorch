@@ -13,25 +13,25 @@ This project aims to build a command line application that can be trained on any
 
 **Train function**
 
-`--data_dir`: arguments.data_dir
+`--data_dir`: set the directory of your own training data.
 
-`--batch_size`: arguments.batch_size
+`--batch_size`: set the size of the batches.
 
-`--arch`: arguments.arch
+`--arch`: choose between using a vgg19 or a densenet121 architecture for your neural network.
 
-`--h1_units`: arguments.h1_units
+`--h1_units`: set the size of the first hidden layer.
 
-`--h2_units`: arguments.h2_units
+`--h2_units`: set the size of the second hidden layer.
 
-`--json_file`: arguments.json_file
+`--json_file`: use your own label data for the training and classification.
 
-`--learning_rate`: arguments.learning_rate
+`--learning_rate`: set your learning rate for the backpropagation.
 
-`--epochs`: arguments.epochs
+`--epochs`: set the number of epochs to train the neural network.
 
-`--gpu`: arguments.gpu
+`--gpu`: decide whether you wan to process the algorithm on the gpu (if available) or the cpu.
 
-`--save_dir`: arguments.save_dir
+`--save_dir`: set the directory where you wanto to save the data.
 
 **Predic function**
 
