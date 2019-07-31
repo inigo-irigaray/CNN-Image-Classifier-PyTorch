@@ -3,7 +3,7 @@
 This project aims to build a command line application that can be trained on any set of labeled images. It has been broken down in 2 parts. The first part is the implementation on a jupyter notebook of the VGGnet architecture on a dataset of flower images to generate the code for a deep learning image classifier ([Classifier Development](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/tree/master/Classifier-Development)). The second part is the generalization of the code to create a convolutional neural network that allows the user to create his/her own classifier on any image dataset ([CNN model](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/tree/master/CNNmodel)).
 
 
-**1. Loading, preprocessing and visualizing the dataset.** The first step was developing a the functions to load, pre-process and display the data. It can be helpful for the user to visualize data beforehand to familirarize himself/herself with the set. (These functions can be found on [utility-functions.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/utility_functions.py))
+**1. Loading, preprocessing and visualizing the dataset.** The first step was developing a the functions to load, pre-process and display the data. It can be helpful for the user to visualize data beforehand to familiarize himself/herself with the set. (These functions can be found on [utility-functions.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/utility_functions.py))
 
 **2. Training the image classifier on the dataset.** Secondly, the training dataset is processed through the pipeline to train the neural network. (These functions can be found on [train.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/train.py) and [CNNmodel.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/CNNmodel.py))
 
@@ -31,7 +31,7 @@ This project aims to build a command line application that can be trained on any
 
 `--gpu`: decide whether you wan to process the algorithm on the gpu (if available) or the cpu.
 
-`--save_dir`: set the directory where you wanto to save the checkpoint.
+`--save_dir`: set the directory where you want to save the checkpoint.
 
 **Predic function**
 
