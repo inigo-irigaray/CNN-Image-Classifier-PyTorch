@@ -75,7 +75,7 @@ In this next step, I created a function that generates a pretrained model with t
 
 For training, I created a model that uses Negative Log-Likeliood Loss and the Adam optimization, since they allow for quicker training of neural networks, efficient and correct learning. The model lets the user set the epochs, with a default of 6. It is important to note that in general the higher the number of epochs, the more accurate the model will get, since it will repeat the feed-forward-backpropagation process more times. 
 
-After training, the model trained with the user's dataset is then saved in his/her directory of choice as a checkpoint file (.pth).
+Then, the model trained with the user's dataset is then saved in his/her directory of choice as a checkpoint file (.pth).
 
 # 5. Predicting the category of each image on the dataset.
 
