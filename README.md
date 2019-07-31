@@ -59,15 +59,11 @@ Finally, I created three color spacing functions to count the number of red, yel
 
    - In the second one, I adjusted the red lower bound to 107, to increase the red spectrum and ensure a higher count of pixels in the image. **My accuracy decreases to ~97%**, but I eliminated the unwanted red as green misclassification.
 
-# 5. Classification and visualizing the error.
-
-The final step in the project includes a function to get the estimated labels after sending the image through the feature-extraction pipeline, as well as a function to identify the misclassifications to calculate the accuracy of the model and test whether there is an unsafe misclassification.
-
-# 6. How to use?
+# 5. How to use?
 
 For use, the repository should be cloned or downloaded. Running the main-classifier.py on the Terminal processes the image dataset given. To use the algorithms on other images the user must make a minor change in main-classifier.py in the variable that keeps the directory of the files to be classified. And then, the program should run smoothly and deliver the expected results.
 
-# 7. License.
+# 6. License.
 
 All images come from this [MIT self-driving car course](https://selfdrivingcars.mit.edu/) and are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
 <p float="left">
