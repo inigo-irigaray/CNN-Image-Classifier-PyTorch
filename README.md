@@ -69,36 +69,18 @@ Finally, the images need to be normalized, with values for the means [0.485, 0.4
 
 # 3. Generating the new neural network model.
 
-
+In this next step, I created a function that generates a pretrained model with two possible architectures for the user to choose: vgg19 and densenet121, with former set by default. This model takes an input layer size of 25,088, with two hidden layers (the user can freely set their size) and an output layer size equal to the number of possible classification categories. This model is created with the ReLU activation function and the LogSoftMax function, with a dropout of p=0.2.
 
 # 4. Training the image classifier on the dataset.
 
-For classification tasks like this one we need to create features by performing the same analysis on different pictures. It is, therefore, important that similar images create similar features. And to facilitate this, we will standardize the input and output to understand what results we can expect from running the program.
-
-First, I created a function that takes an image and resizes it to 32x32. Square images can be rotated and analyzed in smaller square patches. Additionally, if all images are the same size we can confidently pass them through the same pipeline.
-
-Secondly, it is customary to convert categorical labels like 'red' to numerical values. I created a function that one-hot encodes the labels into a 1D list of zeros with a number one representing the categorical value in the following way:
-  - red     =   [1,0,0]
-  - yellow  =   [0,1,0]
-  - green   =   [0,0,1]
-
-Finally, I created a function to standardize a list of images and pair each image to its one-hot encoded label.
+For training, I created a model that uses Negative Log-Likeliood Loss and the Adam optimization, since they allow for quicker training of neural networks, efficient and correct learning. The model lets the user set the epochs, with a default of 6. It is important to note that in general the higher the number of epochs, the more accurate the model will get, since it will repeat the feed-forward-backpropagation process more times. 
 
 # 5. Predicting the category of each image on the dataset.
 
-In this part of the project I thought about the different features and layers that combine to form a colored image and which ones are more characteristic of the areas that would represent the red, yellow and green lights in the image. I converted the images to HSV for the whole process.
 
-I thought that it would be best to apply first a saturation mask to identify the colorful areas in the image, independently of illumination, which differed in some images and can be affected by weather conditions for instance. Since I expected the color light to be one of the most saturated parts of the image, I applied a minimum threshold that is the average saturation plus the standard deviation of the saturation of the image. Thus, I make sure that I just take into account the parts of the image that are systematically saturated above average and account for differences from image to image.
 
-Secondly, I applied a brightness mask on the saturation-masked image, since an illuminated traffic light can be expected t be brighter than the rest of the image. I applied a similar reasoning when writing the minimum threshold as in the saturation mask. This time, instead of adding the standard deviation to the mean of the brightness, I added a scalar times the standard deviation, as I expected the illuminated part of the traffic light would much brighter than the rest of the masked image. After some testing I found a scalar of 2 to be the best fit for the algorithm.
+   <p align="center"> <img src="https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/Classifier-Development/predict-example.png" height = 450 width=400 > <p/>
 
-Finally, I created three color spacing functions to count the number of red, yellow and green pixels in the brightness-and-saturation-masked image. Here I found the green thresholds to be one of the most sensitive to changes. I, therefore, had to make multiple tests to fine-tune the thresholds. The yellow one was more receptive to changes and didn't affect the overall performance of the algorithm that much. Overall, it was similar with the red thresholds. However, here I found that it was essential when aiming for virtually 100% accuracy. That is why I created two models, depending on the red threshold.
-
-   - In the first one, I managed to achieve a **~99% accuracy**, with a lower bound of 120 in the red count function, with only 3 out of 297 misclassifications in the testing set. However, one of those was a red light classify as a green light, which is very unsafe for driving. To be fair, it is a very low-quality image, that makes the bottom part of the image look greenish and the red is yellowish, as you can see below. To solve this issue I tried applying image-localization filters for the colors, brightness and saturation features, it is a general assumption that red lights are on top and green lights at the bottom. I also made multiple adjustments to thresholding in the existing functions. However, I never managed to keep or increase the accuracy while eliminating the dangerous misclassification.
-
-   <p align="center"> <img src="https://github.com/inigo-irigaray/Traffic-Light-Classifier-Symbolic-AI/blob/master/Traffic-Light-99%25/images/red-misclass-green.png" height = 300 width=250 > <p/>
-
-   - In the second one, I adjusted the red lower bound to 107, to increase the red spectrum and ensure a higher count of pixels in the image. **My accuracy decreases to ~97%**, but I eliminated the unwanted red as green misclassification.
 
 # 6. How to use?
 
