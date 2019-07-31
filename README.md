@@ -31,19 +31,19 @@ This project aims to build a command line application that can be trained on any
 
 `--gpu`: decide whether you wan to process the algorithm on the gpu (if available) or the cpu.
 
-`--save_dir`: set the directory where you wanto to save the data.
+`--save_dir`: set the directory where you wanto to save the checkpoint.
 
 **Predic function**
 
-`--image_path`: arguments.image_path
+`--image_path`: decide which image you want the CNN to predict by giving its filepath.
 
-`--checkpoint_file`: arguments.checkpoint_file
+`--checkpoint_file`: import the checkpoint you saved after training.
 
-`--json_file`: arguments.json_file
+`--json_file`: use your own label data for the training and classification.
 
 `--topk`: arguments.topk
 
-`--gpu`: arguments.gpu
+`--gpu`: decide whether you wan to process the algorithm on the gpu (if available) or the cpu.
 
 ---------
 
