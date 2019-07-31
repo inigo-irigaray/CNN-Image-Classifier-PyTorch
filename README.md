@@ -1,1 +1,1 @@
-# CNN-Image-Classifier-PyTorch
+# CNN Image Classifier PyTorch
