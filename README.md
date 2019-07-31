@@ -1,6 +1,6 @@
 # CNN Image Classifier PyTorch
 
-This project aims to build a command line application that can be trained on any set of labeled images. It has been broken down in 2 parts. The first part is the implementation on a jupyter notebook of the VGGnet architecture on a dataset of flower images to generate the code for a deep learning image classifier ([Classifier Development](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/tree/master/Classifier-Development)). The second part is the generalization of the code to create a convoluttional neural network that allows the user to create its own classifier on any image dataset. ([CNN model](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/tree/master/CNNmodel))
+This project aims to build a command line application that can be trained on any set of labeled images. It has been broken down in 2 parts. The first part is the implementation on a jupyter notebook of the VGGnet architecture on a dataset of flower images to generate the code for a deep learning image classifier ([Classifier Development](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/tree/master/Classifier-Development)). The second part is the generalization of the code to create a convoluttional neural network that allows the user to create its own classifier on any image dataset ([CNN model](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/tree/master/CNNmodel)).
 
 
 **1. Loading, preprocessing and visualizing the dataset.** The first step was developing a display function to visualize and familiarize myself with the data. (These functions can be found on [utility-functions.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/utility_functions.py))
@@ -8,6 +8,42 @@ This project aims to build a command line application that can be trained on any
 **2. Training the image classifier on the dataset.** Secondly, the images and output labels needed to be standardized. Thus, all the images can be analyzed using the same classification pipeline, and we know what output to expect for every new image classification. (These functions can be found on [train.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/train.py) and [CNNmodel.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/CNNmodel.py))
 
 **3. Predicting the category of each image on the dataset.** Thirdly, I applied some filters and masks to extract the features from the images that will help to classify them into the three categories. (These functions can be found on [predict.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/predict.py.py) and [CNNmodel.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/CNNmodel.py))
+
+## User inputs:
+
+**Train function**
+
+`--data_dir`: arguments.data_dir
+
+`--batch_size`: arguments.batch_size
+
+`--arch`: arguments.arch
+
+`--h1_units`: arguments.h1_units
+
+`--h2_units`: arguments.h2_units
+
+`--json_file`: arguments.json_file
+
+`--learning_rate`: arguments.learning_rate
+
+`--epochs`: arguments.epochs
+
+`--gpu`: arguments.gpu
+
+`--save_dir`: arguments.save_dir
+
+**Predic function**
+
+`--image_path`: arguments.image_path
+
+`--checkpoint_file`: arguments.checkpoint_file
+
+`--json_file`: arguments.json_file
+
+`--topk`: arguments.topk
+
+`--gpu`: arguments.gpu
 
 ---------
 
