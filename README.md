@@ -5,9 +5,11 @@ This project aims to build a command line application that can be trained on any
 
 **1. Loading, preprocessing and visualizing the dataset.** The first step was developing a the functions to load, pre-process and display the data. It can be helpful for the user to visualize data beforehand to familiarize himself/herself with the set. (These functions can be found on [utility-functions.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/utility_functions.py))
 
-**2. Training the image classifier on the dataset.** Secondly, the training dataset is processed through the pipeline to train the neural network. (These functions can be found on [train.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/train.py) and [CNNmodel.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/CNNmodel.py))
+**2. Generating the new neural network model.** Secondly, I created a function that generates a pretrained model with two hidden layers and an output layer size equal to the number of possible classification categories. (These functions can be found on [CNNmodel.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/CNNmodel.py))
 
-**3. Predicting the category of each image on the dataset.** Finally, the user can process the image he/she wants to classify through the neural network and it will output the most likely category with a high confidence level. (These functions can be found on [predict.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/predict.py.py) and [CNNmodel.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/CNNmodel.py))
+**3. Training the image classifier on the dataset.** Thirdly, the training dataset is processed through the pipeline to train the neural network. (These functions can be found on [train.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/train.py) and [CNNmodel.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/CNNmodel.py))
+
+**4. Predicting the category of each image on the dataset.** Finally, the user can process the image he/she wants to classify through the neural network and it will output the most likely category with a high confidence level. (These functions can be found on [predict.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/predict.py.py) and [CNNmodel.py](https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/CNNmodel/CNNmodel.py))
 
 ## User inputs:
 
@@ -65,7 +67,11 @@ Finally, the images need to be normalized, with values for the means [0.485, 0.4
 
 <p align="center"> <img src="https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/Classifier-Development/preprocessing-display-example.png" height=300 width=350> <p/>
 
-# 3. Training the image classifier on the dataset.
+# 3. Generating the new neural network model.
+
+
+
+# 4. Training the image classifier on the dataset.
 
 For classification tasks like this one we need to create features by performing the same analysis on different pictures. It is, therefore, important that similar images create similar features. And to facilitate this, we will standardize the input and output to understand what results we can expect from running the program.
 
@@ -78,7 +84,7 @@ Secondly, it is customary to convert categorical labels like 'red' to numerical 
 
 Finally, I created a function to standardize a list of images and pair each image to its one-hot encoded label.
 
-# 4. Predicting the category of each image on the dataset.
+# 5. Predicting the category of each image on the dataset.
 
 In this part of the project I thought about the different features and layers that combine to form a colored image and which ones are more characteristic of the areas that would represent the red, yellow and green lights in the image. I converted the images to HSV for the whole process.
 
@@ -94,11 +100,7 @@ Finally, I created three color spacing functions to count the number of red, yel
 
    - In the second one, I adjusted the red lower bound to 107, to increase the red spectrum and ensure a higher count of pixels in the image. **My accuracy decreases to ~97%**, but I eliminated the unwanted red as green misclassification.
 
-# 5. How to use?
+# 6. How to use?
 
 For use, the repository should be cloned or downloaded. Running the main-classifier.py on the Terminal processes the image dataset given. To use the algorithms on other images the user must make a minor change in main-classifier.py in the variable that keeps the directory of the files to be classified. And then, the program should run smoothly and deliver the expected results.
 
-# 6. License.
-
-All images come from this [MIT self-driving car course](https://selfdrivingcars.mit.edu/) and are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
-<p float="left">
