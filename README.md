@@ -79,7 +79,7 @@ Then, the model trained with the user's dataset is then saved in his/her directo
 
 # 5. Predicting the category of each image on the dataset.
 
-Finally, to predict the image category, the model first loads the trained model from the checkpoint. It then runs the image through the pipeline and outputs the predicted image category. Additionally, it displays the image on top of a plot of the 5 most likely classes and their probabilities.
+Finally, to predict the image category, the model first loads the trained model from the checkpoint. It then runs the image through the pipeline and outputs the predicted image category. Additionally, it displays the image on top of a plot of the 5 most likely classes and their probabilities. This allows the user to check the level of certainty the model has for that prediction and to visualize the data easily.
 
    <p align="center"> <img src="https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/Classifier-Development/predict-example.png" height = 450 width=400 > <p/>
 
@@ -88,3 +88,14 @@ Finally, to predict the image category, the model first loads the trained model 
 
 For use, the repository should be cloned or downloaded. Running the main-classifier.py on the Terminal processes the image dataset given. To use the algorithms on other images the user must make a minor change in main-classifier.py in the variable that keeps the directory of the files to be classified. And then, the program should run smoothly and deliver the expected results.
 
+# 7. License.
+
+MIT License
+
+Copyright (c) 2018 Udacity
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
