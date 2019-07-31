@@ -79,7 +79,7 @@ Then, the model trained with the user's dataset is then saved in his/her directo
 
 # 5. Predicting the category of each image on the dataset.
 
-Finally, 
+Finally, to predict the image category, the model first loads the trained model from the checkpoint. It then runs the image through the pipeline and outputs the predicted image category. Additionally, it displays the image on top of a plot of the 5 most likely classes and their probabilities.
 
    <p align="center"> <img src="https://github.com/inigo-irigaray/CNN-Image-Classifier-PyTorch/blob/master/Classifier-Development/predict-example.png" height = 450 width=400 > <p/>
 
